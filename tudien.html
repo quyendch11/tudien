@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhập từ:</p>
+<input id="nhap" type="text"/>
+<input type="button" value="dịch" onclick="dich()"/>
+<p id="ketqua"></p>
+<script>
+    let tienganh = ["dog", "chicken", "mouse", "apple", "banana"];
+    let tiengviet = ["con chó", "con gà", "con chuột", "quả táo", "quả chuối"];
+    function dich() {
+        let a = document.getElementById("nhap").value;
+        let b = 0;
+        let c = "";
+        for (let i = 0; i < tienganh.length; i++) {
+            if (a === tienganh[i]) {
+                b = i;
+            }
+            for (let j = 0; j < tiengviet.length; j++) {
+                if (b == j) {
+                    c = tiengviet[j];
+                }
+            }
+        }
+        document.getElementById("ketqua").innerHTML = c;
+    }
+
+</script>
+</body>
+</html>
